@@ -1,0 +1,94 @@
+html{
+    line-height: 45px;
+    max-width: 1800px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Norse", "Skranji", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+header{
+    font-size: 75px;
+}
+header img{
+    max-width: 400px;
+    border-radius: 250px;
+    box-shadow: 5px 5px 15px grey;  
+}
+
+body, html {
+    height: 100%;
+  }
+  
+  .parallax {
+    /* The image used */
+    background-image: url("https://i.etsystatic.com/16006406/r/il/f52c64/2354104622/il_794xN.2354104622_c3e9.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @font-face {
+    font-family: Norse;
+    src: url(Norse-KaWl.otf);
+  }
+
+  div{
+    font-size: 20px;
+  }
+
+  div p{
+    font-size: 30px;
+  }
+
+  select{
+    width: 400px;
+  }
+
+  #quiz {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #5dd4f8e1;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(198, 222, 60, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333333;
+  }
+  
+  #question {
+    margin-bottom: 20px;
+  }
+  
+  #options {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: rgb(211, 42, 42), 245, 161;
+  color: black;
+  border: solid black 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Norse", "Skranji", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:25px;
+}
+  
+  button:hover {
+    background-color: #8f8d8d;
+  }
