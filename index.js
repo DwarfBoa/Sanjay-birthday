@@ -1,58 +1,58 @@
 const quizData = [
     {
       question: "What is Sanjays favourite food?",
-      options: ["Cheese", "Madrid", "Rome", "Berlin"],
-      answer: "Paris"
+      options: ["Cheese", "Steak", "Roti", "Burger"],
+      answer: "Steak"
     },
     {
       question: "What is Sanjays favourite colour?",
-      options: ["Jupiter", "Saturn", "Mars", "Earth"],
-      answer: "Jupiter"
+      options: ["Red", "Blue", "Green", "Yellow"],
+      answer: "Blue"
     },
     {
       question: "What is Sanjays favourite country?",
-      options: ["Jupiter", "Saturn", "Mars", "Earth"],
-      answer: "Jupiter"
+      options: ["England", "Zimbabwe", "Dubai", "India"],
+      answer: "Zimbabwe"
     },
     {
       question: "What is Sanjays favourite musician?",
-      options: ["Jupiter", "Saturn", "Mars", "Earth"],
-      answer: "Jupiter"
+      options: ["Taylro swift", "Cardi B", "Bob Marley", "Slipknot"],
+      answer: "Cardi B"
     },
     {
       question: "What is Sanjays shoe size?",
-      options: ["Jupiter", "Saturn", "Mars", "Earth"],
-      answer: "Jupiter"
+      options: ["19", "5", "11.5", "8.5"],
+      answer: "8.5"
     },
     {
       question: "When did Sanjay get married?",
-      options: ["Jupiter", "Saturn", "Mars", "Earth"],
-      answer: "Jupiter"
+      options: ["1998", "1978", "2001", "2004"],
+      answer: "2004"
     },
     {
       question: "How many children does Sanjay have?",
-      options: ["Jupiter", "Saturn", "Mars", "Earth"],
-      answer: "Jupiter"
+      options: ["1", "4", "2", "3"],
+      answer: "2"
     },
     {
       question: "Who snores louder than sanjay?",
-      options: ["Jupiter", "Saturn", "Mars", "Earth"],
-      answer: "Jupiter"
+      options: ["No-one", "Krischen", "Meena", "Serena"],
+      answer: "No-one"
     },
     {
       question: "What is Sanjays favourite sport?",
-      options: ["Jupiter", "Saturn", "Mars", "Earth"],
-      answer: "Jupiter"
+      options: ["Golf", "Cricket", "Rrugby", "Basketball"],
+      answer: "Golf"
     },
     {
       question: "What was sanjays first car?",
-      options: ["Jupiter", "Saturn", "Mars", "Earth"],
-      answer: "Jupiter"
+      options: ["Corsa", "Pinto", "Panda", "Lexus"],
+      answer: "Pinto"
     },
     {
       question: "When did sanjay start warm embrace?",
-      options: ["Jupiter", "Saturn", "Mars", "Earth"],
-      answer: "Jupiter"
+      options: ["2023", "2010", "2024", "2019"],
+      answer: "2023"
     },
 
     // Add more questions here...

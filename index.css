@@ -9,7 +9,7 @@ html{
 }
 
 header{
-    font-size: 2vw;
+    font-size: 6em;
 }
 header img{
     max-width: 400px;
@@ -27,6 +27,7 @@ body, html {
   
     /* Full height */
     height: 100%;
+    width: 100%;
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -40,21 +41,19 @@ body, html {
     src: url(Norse-KaWl.otf);
   }
 
-  div{
-    font-size: 20px;
-
-  }
-
-  div p{
-    font-size: 30px;
-  }
-
+main{
+  font-size: 1.5em;
+}
+div{
+  font-size: 1.5em;
+}
   select{
     width: 400px;
   }
 
   #quiz {
     border: solid black 1px;
+    font-size: 1em;
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
