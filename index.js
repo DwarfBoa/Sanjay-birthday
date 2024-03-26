@@ -103,3 +103,29 @@ const quizData = [
   }
   
   showQuestion();
+  document.addEventListener('DOMContentLoaded', function () {
+    var imageSlides = document.querySelectorAll('.imageSlides');
+    var counter = 0;
+  
+    function showSlide(n) {
+      // Hide all slides
+      imageSlides.forEach(function (slide) {
+        slide.classList.remove('active');
+      });
+  
+      // Show the slide at the given index
+      imageSlides[n].classList.add('active');
+    }
+  
+    function nextSlide() {
+      counter = (counter + 1) % imageSlides.length;
+      showSlide(counter);
+    }
+  
+    // Show first slide
+    showSlide(counter);
+  
+    // Auto slide
+    setInterval(nextSlide, 5000); // Change interval as needed
+  });
+  

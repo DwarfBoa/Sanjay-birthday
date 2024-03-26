@@ -1,15 +1,15 @@
 html{
-    line-height: 45px;
-    max-width: 1800px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    line-height: 5em;
+    max-width: 1200px;
+    padding-top: 2%;
+    padding-bottom: 2%;
     margin: 0 auto;
     text-align: center;
     font-family: "Norse", "Skranji", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
+
 header{
-    font-size: 75px;
+    font-size: 2vw;
 }
 header img{
     max-width: 400px;
@@ -42,6 +42,7 @@ body, html {
 
   div{
     font-size: 20px;
+
   }
 
   div p{
@@ -53,6 +54,7 @@ body, html {
   }
 
   #quiz {
+    border: solid black 1px;
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
@@ -92,3 +94,96 @@ button {
   button:hover {
     background-color: #8f8d8d;
   }
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  max-width: 500px;
+  height: 500px;
+}
+
+/* Hide all images by default */
+.imageSlides {
+  transform: -50% -50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 500px; /* Ensure images cover the entire container */
+  opacity: 0;
+  transition: opacity 1s ease; /* Smooth fade transition */
+}
+
+/* Show active slide */
+.imageSlides.active {
+  opacity: 1;
+}
+
+.rainbow-letters {
+  font-size: 90px;
+  
+}
+
+.rainbow-letters span:nth-child(10n + 1) {
+  color: #ef5350;
+}
+
+.rainbow-letters span:nth-child(10n + 2) {
+  color: #ab47bc;
+}
+
+.rainbow-letters span:nth-child(10n + 3){
+  color: #651fff;
+}
+
+.rainbow-letters span:nth-child(10n + 5){
+  color: #3949ab;
+}
+
+.rainbow-letters span:nth-child(10n + 4) {
+  color: #2196f3;
+}
+
+.rainbow-letters span:nth-child(10n + 6){
+  color: #00bcd4;
+}
+
+.rainbow-letters span:nth-child(10n + 7){
+  color: #4caf50;
+}
+
+.rainbow-letters span:nth-child(10n + 8){
+  color: #ffc107;
+}
+.rainbow-letters span:nth-child(10n + 9) {
+  color: #ef5350;
+}
+
+.rainbow-letters span:nth-child(10n + 10) {
+  color: #ab47bc;
+}
+
+.rainbow-letters span:nth-child(10n + 11){
+  color: #651fff;
+}
+
+.rainbow-letters span:nth-child(10n + 12){
+  color: #3949ab;
+}
+
+.rainbow-letters span:nth-child(10n + 13) {
+  color: #2196f3;
+}
+
+.rainbow-letters span:nth-child(10n + 14){
+  color: #00bcd4;
+}
+
+.rainbow-letters span:nth-child(10n + 15){
+  color: #4caf50;
+}
+
+.rainbow-letters span:nth-child(10n + 16){
+  color: #ffc107;
+}
