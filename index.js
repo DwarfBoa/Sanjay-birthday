@@ -113,7 +113,7 @@ const quizData = [
         slide.classList.remove('active');
       });
   
-      // Show the slide at the given index
+      // Show the slide at thegiven index
       imageSlides[n].classList.add('active');
     }
   
