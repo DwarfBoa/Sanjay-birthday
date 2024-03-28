@@ -1,56 +1,51 @@
 const quizData = [
     {
-      question: "What is Sanjays favourite food?",
+      question: "What is your favourite food?",
       options: ["Cheese", "Steak", "Roti", "Burger"],
       answer: "Steak"
     },
     {
-      question: "What is Sanjays favourite colour?",
+      question: "What is your favourite colour?",
       options: ["Red", "Blue", "Green", "Yellow"],
       answer: "Blue"
     },
     {
-      question: "What is Sanjays favourite country?",
+      question: "What is your favourite country?",
       options: ["England", "Zimbabwe", "Dubai", "India"],
       answer: "Zimbabwe"
     },
     {
-      question: "What is Sanjays favourite musician?",
-      options: ["Taylro swift", "Cardi B", "Bob Marley", "Slipknot"],
+      question: "Who is your favourite musician?",
+      options: ["Taylor swift", "Cardi B", "Michael jackson", "Slipknot"],
       answer: "Cardi B"
     },
     {
-      question: "What is Sanjays shoe size?",
+      question: "What is your shoe size?",
       options: ["19", "5", "11.5", "8.5"],
       answer: "8.5"
     },
     {
-      question: "When did Sanjay get married?",
-      options: ["1998", "1978", "2001", "2004"],
-      answer: "2004"
+      question: "When did you get married?",
+      options: ["1998", "1978", "1993", "2004"],
+      answer: "1993"
     },
     {
-      question: "How many children does Sanjay have?",
+      question: "How many children do you have?",
       options: ["1", "4", "2", "3"],
       answer: "2"
     },
     {
-      question: "Who snores louder than sanjay?",
+      question: "Who snores louder than you?",
       options: ["No-one", "Krischen", "Meena", "Serena"],
       answer: "No-one"
     },
     {
-      question: "What is Sanjays favourite sport?",
+      question: "What is your favourite sport?",
       options: ["Golf", "Cricket", "Rrugby", "Basketball"],
       answer: "Golf"
     },
     {
-      question: "What was sanjays first car?",
-      options: ["Corsa", "Pinto", "Panda", "Lexus"],
-      answer: "Pinto"
-    },
-    {
-      question: "When did sanjay start warm embrace?",
+      question: "When did your start warm embrace?",
       options: ["2023", "2010", "2024", "2019"],
       answer: "2023"
     },
