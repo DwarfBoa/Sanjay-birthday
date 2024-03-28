@@ -16,7 +16,7 @@ const quizData = [
     },
     {
       question: "Who is your favourite musician?",
-      options: ["Taylor swift", "Cardi B", "Michael jackson", "Slipknot"],
+      options: ["Taylor swift",  "Michael jackson", "Slipknot", "Cardi B"],
       answer: "Cardi B"
     },
     {
@@ -41,7 +41,7 @@ const quizData = [
     },
     {
       question: "What is your favourite sport?",
-      options: ["Golf", "Cricket", "Rrugby", "Basketball"],
+      options: ["Golf", "Cricket", "Rugby", "Basketball"],
       answer: "Golf"
     },
     {
