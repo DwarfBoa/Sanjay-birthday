@@ -41,8 +41,8 @@ const quizData = [
     },
     {
       question: "What is your favourite sport?",
-      options: ["Golf", "Cricket", "Rugby", "Basketball"],
-      answer: "Golf"
+      options: ["Golf", "Cricket", "Rugby", "Tennis"],
+      answer: "Tennis"
     },
     {
       question: "When did your start warm embrace?",
