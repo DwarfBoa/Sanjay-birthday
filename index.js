@@ -1,103 +1,189 @@
-const quizData = [
+const questions = [
     {
       question: "What is your favourite food?",
-      options: ["Cheese", "Steak", "Roti", "Burger"],
-      answer: "Steak"
+      answers: [
+        {text: "Grapes", correct: false}, 
+        {text: "Steak", correct: false}, 
+        {text: "Roti", correct: false}, 
+        {text: "Burger", correct: true}
+      ]
     },
     {
-      question: "What is your favourite colour?",
-      options: ["Red", "Blue", "Green", "Yellow"],
-      answer: "Blue"
+      question: "What is your favourite book?",
+      answers: [
+      {text: "See you at the top - Zig Zaglar", correct: true},
+      {text: "Atomic habits - James Clear", correct: false},
+      {text: "How to win friends and influence people - Dale Carnegie", correct: false},
+      {text: "Chicken soup for the soul - Jack Canfield", correct: false}
+        ]
     },
     {
       question: "What is your favourite country?",
-      options: ["England", "Zimbabwe", "Dubai", "India"],
-      answer: "Zimbabwe"
+      answers: [
+        {text: "England" ,correct: false},
+        {text: "Zimbabwe" ,correct: false},
+        {text: "Dubai" ,correct: true},
+        {text: "India" ,correct: false}
+      ]
     },
     {
       question: "Who is your favourite musician?",
-      options: ["Taylor swift",  "Michael jackson", "Slipknot", "Cardi B"],
-      answer: "Cardi B"
+      answers: [
+        {text: "Taylor swift", correct: false},
+        {text: "Michael jackson", correct: false},
+        {text: "Slipknot", correct: false},
+        {text: "Cardi B", correct: true}
+          ],
     },
     {
       question: "What is your shoe size?",
-      options: ["19", "5", "11.5", "8.5"],
-      answer: "8.5"
+      answers: [
+        {text: "9", correct: false},
+        {text: "8", correct: false},
+        {text: "11.5", correct: false},
+        {text: "8.5", correct: true}
+          ],
     },
     {
-      question: "When did you get married?",
-      options: ["1998", "1978", "1993", "2004"],
-      answer: "1993"
+      question: "How many years of marriage are you celebrating this year?",
+      answers: [
+        {text: "29", correct: false},
+        {text: "30", correct: false}, 
+        {text: "31", correct: true}, 
+        {text: "32", correct: false}
+      ],
+
     },
     {
-      question: "How many children do you have?",
-      options: ["1", "4", "2", "3"],
-      answer: "2"
+      question: "What is your favourite shoe brand",
+      answers: [
+        {text: "Adidas", correct: false}, 
+        {text: "Sketchers", correct: true}, 
+        {text: "Nike", correct: false}, 
+        {text: "New Balance", correct: false}
+      ],
     },
     {
       question: "Who snores louder than you?",
-      options: ["No-one", "Krischen", "Meena", "Serena"],
-      answer: "No-one"
+      answers: [
+        {text: "No-one", correct: true}, 
+        {text: "Krischen Masa", correct: false}, 
+        {text: "Meena", correct: false}, 
+        {text: "Uncle Steve", correct: false}
+      ],
     },
     {
-      question: "What is your favourite sport?",
-      options: ["Golf", "Cricket", "Rugby", "Tennis"],
-      answer: "Tennis"
+      question: "What is your favourite sport to watch?",
+      answers: [
+        {text: "Golf", correct: false}, 
+        {text: "Cricket", correct: false}, 
+        {text: "Rugby", correct: false}, 
+        {text: "Tennis", correct: true}
+      ],
     },
     {
-      question: "When did your start warm embrace?",
-      options: ["2023", "2010", "2024", "2019"],
-      answer: "2023"
+      question: "What would be the best birthday treat?",
+      answers: [
+        {text: "A lovely evening at a fancy wine & cheese bar", correct: true}, 
+        {text: "A trip to salt lane car park", correct: false}, 
+        {text: "Give toffee eye medicine", correct: false}, 
+        {text: "Night out of with Meena's girl friends", correct: false}
+      ],
     },
 
     // Add more questions here...
   ];
-  
   const questionElement = document.getElementById("question");
-  const optionsElement = document.getElementById("options");
-  const submitButton = document.getElementById("submit");
-  
-  let currentQuestion = 0;
-  let score = 0;
-  
-  function showQuestion() {
-    const question = quizData[currentQuestion];
-    questionElement.innerText = question.question;
-  
-    optionsElement.innerHTML = "";
-    question.options.forEach(option => {
-      const button = document.createElement("button");
-      button.innerText = option;
-      optionsElement.appendChild(button);
-      button.addEventListener("click", selectAnswer);
-    });
-  }
-  
-  function selectAnswer(e) {
-    const selectedButton = e.target;
-    const answer = quizData[currentQuestion].answer;
-  
-    if (selectedButton.innerText === answer) {
-      score++;
-    }
-  
-    currentQuestion++;
-  
-    if (currentQuestion < quizData.length) {
-      showQuestion();
-    } else {
-      showResult();
-    }
-  }
-  
-  function showResult() {
-    quiz.innerHTML = `
-      <h1>Quiz Completed!</h1>
-      <p>Your score: ${score}/${quizData.length}</p>
-    `;
-  }
-  
+  const answerButtons = document.getElementById("answer-buttons");
+  const nextButton = document.getElementById("next-btn");
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz(){
+  currentQuestionIndex = 0;
+  score = 0;
+  nextButton.innerHTML = "next";
   showQuestion();
+}
+function showQuestion(){
+  resetState();
+  let currentQuestion = questions[currentQuestionIndex];
+  let questionNo = currentQuestionIndex + 1;
+  questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+  currentQuestion.answers.forEach(answer=> {
+    const button = document.createElement("button");
+    button.innerHTML = answer.text;
+    button.classList.add("btn");
+    answerButtons.appendChild(button);
+    if(answer.correct){
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener("click", selectAnswer);
+
+  })
+}
+
+
+function resetState(){
+  nextButton.style.display = "none";
+  while(answerButtons.firstChild){
+    answerButtons.removeChild(answerButtons.firstChild);
+  }
+
+}
+function selectAnswer(e){
+  const selectedBtn = e.target;
+  const isCorrect = selectedBtn.dataset.correct === "true";
+  if(isCorrect){
+    selectedBtn.classList.add("correct");
+    score++;
+  }
+  else{
+    selectedBtn.classList.add("incorrect");
+  }
+  Array.from(answerButtons.children).forEach(button => {
+    if(button.dataset.correct === "true"){
+      button.classList.add("correct");
+    }
+    button.disabled = true;
+    nextButton.style.display = "block";
+  }
+  )
+}
+
+
+function showScore(){
+  resetState();
+  questionElement.innerHTML = `you scored ${score} out of ${questions.length}!`;
+  nextButton.innerHTML = "Play Again";
+  nextButton.style.display = "block";
+}
+
+function handleNextButton(){
+  currentQuestionIndex++;
+  if(currentQuestionIndex < questions.length){
+  showQuestion();
+}
+else{
+  showScore();
+}
+}
+
+
+nextButton.addEventListener("click", ()=>{
+  if(currentQuestionIndex < questions.length){
+    handleNextButton();
+  }
+  else{
+    startQuiz();
+  }
+})
+
+
+startQuiz();
+
   document.addEventListener('DOMContentLoaded', function () {
     var imageSlides = document.querySelectorAll('.imageSlides');
     var counter = 0;
@@ -121,7 +207,7 @@ const quizData = [
     showSlide(counter);
   
     // Auto slide
-    setInterval(nextSlide, 5000); // Change interval as needed
+    setInterval(nextSlide, 2000); // Change interval as needed
   });
   
   const duration = 15 * 1000,

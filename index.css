@@ -1,3 +1,9 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html{
     line-height: 5em;
     max-width: 1200px;
@@ -12,6 +18,8 @@ header{
     font-size: 6em;
 }
 header img{
+  margin-bottom: 50px;
+  margin-top: 50px;
     max-width: 400px;
     border-radius: 250px;
     box-shadow: 5px 5px 15px grey;  
@@ -40,59 +48,27 @@ body, html {
     font-family: Norse;
     src: url(Norse-KaWl.otf);
   }
-
+  footer{
+    font-size: 25px;
+  }
+.slidetitle{
+margin-left: 300px;
+margin-right: 300px;
+margin-top: 50px;
+margin-bottom: 10px;
+}
 main{
   font-size: 1.5em;
 }
 div{
   font-size: 1.5em;
 }
-  select{
-    width: 400px;
-  }
-
-  #quiz {
-    border: solid black 1px;
-    font-size: 1em;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #5dd4f8e1;
-    border-radius: 5px;
-    box-shadow: 5px 5px 15px rgba(198, 222, 60, 0.2);
-  }
   
   h1 {
     text-align: center;
     color: #000000;
   }
-  
-  #question {
-    margin-bottom: 20px;
-  }
-  
-  #options {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-button {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: rgb(211, 42, 42), 245, 161;
-  color: black;
-  border: solid black 1px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: "Norse", "Skranji", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size:25px;
-}
-  
-  button:hover {
-    background-color: #888484;
-  }
+
 /* Slideshow container */
 .slideshow-container {
   position: relative;
@@ -111,7 +87,7 @@ button {
   left: 0;
   max-width: 500px; /* Ensure images cover the entire container */
   opacity: 0;
-  transition: opacity 1s ease; /* Smooth fade transition */
+  transition: opacity 1.5s ease; /* Smooth fade transition */
 }
 
 /* Show active slide */
@@ -185,4 +161,77 @@ button {
 
 .rainbow-letters span:nth-child(10n + 16){
   color: #ffc107;
+}
+
+
+.app{
+  background: #8cabcf;
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto 0;
+  border-radius: 10px;
+  padding: 30px;
+  border: 1px solid #000000;
+}
+.app h1{
+  font-size: 40px;
+  color: #000000;
+  font-weight: 600;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 30px;
+}
+.quiz{
+  padding: 20px 0;
+}
+.quiz h2{
+  font-size: 25px;
+  color: #000000;
+  font-weight: 600;
+}
+
+#next-btn{
+  font-size: 20px;
+font-family: "Norse", "Skranji", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: #000000;
+color: #fff;
+font-weight: 500;
+width: 150px;
+border: 0;
+padding: 10px;
+margin: 20px auto 0;
+border-radius: 4px;
+cursor: pointer;
+display: none;
+}
+.btn {
+  background: #b3b3b3;
+  color: #222;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid #222;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 4px;
+  font-family: "Norse", "Skranji", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  font-size: 25px;
+  transition: all 0.3s;
+}
+
+.btn:disabled{
+  cursor: no-drop;
+}
+
+.btn:hover:not([disabled]){
+  background: #222;
+  color: #fff;
+}
+.correct{
+  background: #9aeabc;
+
+}
+
+.incorrect{
+  background: #ff9393;
 }
